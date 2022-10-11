@@ -1,17 +1,15 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "3.26.0"
+      source = "hashicorp/aws"
     }
     random = {
-      source  = "hashicorp/random"
-      version = "3.0.1"
+      source = "hashicorp/random"
     }
   }
- 
 
-  backend remote {
+
+  backend "remote" {
     organization = "Hossam-ACG-Terraform-Labs"
 
     workspaces {
